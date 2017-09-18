@@ -2,27 +2,14 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-8">
-        <div class="mb-5">
+        <div v-for="(post, index) in posts" :key="index" class="mb-5">
           <h2>
-            Sample blog post
+            {{ post.meta.title }}
             <small class="d-block text-muted mt-3 mb-4">
-              Sep 17, 2017
+              {{ $moment(post.meta.date, $moment.ISO_8601).format("dddd, D MMMM YYYY") }}
             </small>
           </h2>
-          <p>
-            This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.
-          </p>
-          <hr>
-          <p>
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam.
-            Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
-          </p>
-          <p>
-            Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
-          </p>
-          <p>
-            Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
-          </p>
+          <div v-html="post.content"></div>
         </div>
       </div>
       <div class="col-12 col-lg-4">
@@ -34,7 +21,38 @@
 </template>
 
 <script>
-export default {
+import axios from 'axios'
 
+export default {
+  data () {
+    return {
+      posts: []
+    }
+  },
+
+  mounted () {
+    this.fetchPosts()
+  },
+
+  methods: {
+    fetchPosts () {
+      axios.get(this.$env.API_URL + '/contents/content/blog')
+      .then(response => {
+        for (var i = 0; i < response.data.length; i++) {
+          axios.get(response.data[i].url, {
+            headers: {
+              'accept': 'application/vnd.github.v3.raw'
+            }
+          }).then(response => {
+            var post = this.$md.render(response.data)
+            this.posts.push({
+              content: post,
+              meta: this.$md.meta
+            })
+          })
+        }
+      })
+    }
+  }
 }
 </script>

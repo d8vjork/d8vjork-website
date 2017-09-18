@@ -1,6 +1,7 @@
 ---
 title: "Kiarga"
-languages: ruby rails javascript vue
+image: "https://i.imgur.com/khrLirI.jpg"
+languages: [ruby, rails, javascript, vue]
 website: "https://kiarga.unikia.es"
 ---
 

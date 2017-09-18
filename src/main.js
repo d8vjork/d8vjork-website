@@ -4,6 +4,17 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// Addons
+import meta from 'markdown-it-meta'
+import moment from 'moment'
+
+Vue.prototype.$md = require('markdown-it')({
+  html: true,
+  xhtmlOut: true
+}).use(meta)
+Vue.prototype.$moment = moment
+Vue.prototype.$env = process.env
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

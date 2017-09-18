@@ -1,6 +1,7 @@
 ---
 title: "Social-chan"
-languages: php laravel javascript vue
+image: "https://i.imgur.com/wduINsH.jpg"
+languages: [php, laravel, javascript, vue]
 website: "https://social-chan.com/"
 ---
 

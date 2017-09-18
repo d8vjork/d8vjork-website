@@ -1,60 +1,56 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-lg-4 mb-3">
+    <transition-group tag="div" class="row" name="fade" enter-class="animated fadeIn" leave-class="animated fadeOut" appear>
+      <div v-for="(project, index) in projects" :key="index" class="col-12 col-lg-4 mb-3">
         <div class="card">
-          <img class="card-img-top" src="../assets/img/social-chan.jpg" alt="socialchan-screenshot">
+          <img class="card-img-top" :src="project.meta.image" :alt="project.meta.title + ' image'">
           <div class="card-body">
             <h4 class="card-title">
-              Social-chan
+              {{ project.meta.title }}
             </h4>
-            <p class="card-text">
-              One of the biggest future-launch planned projects that I'm leading, a monothematic social network for anime and manga fans.
-            </p>
-            <a href="https://social-chan.com" target="_blank" class="btn btn-primary">Website</a>
+            <p class="card-text" v-html="project.content"></p>
+            <a :href="project.meta.website" target="_blank" class="btn btn-primary">Website</a>
             <a href="#" target="_blank" class="btn btn-secondary">Read more</a>
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-4 mb-3">
-        <div class="card">
-          <img class="card-img-top" src="../assets/img/unikia.jpg" alt="unikia_screenshot">
-          <div class="card-body">
-            <h4 class="card-title">
-              Unikia
-            </h4>
-            <p class="card-text">
-              Unikia is my first professional project, created for dealing with some enterprise solutions.
-            </p>
-            <a href="https://social-chan.com" target="_blank" class="btn btn-primary">Website</a>
-            <a href="#" target="_blank" class="btn btn-secondary">Read more</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-4 mb-3">
-        <div class="card">
-          <img class="card-img-top" src="../assets/img/unikia.jpg" alt="unikia_screenshot">
-          <div class="card-body">
-            <h4 class="card-title">
-              Kiarga
-            </h4>
-            <p class="card-text">
-              Kiarga is a part of Unikia that offers different specific solutions.
-            </p>
-            <a href="https://social-chan.com" target="_blank" class="btn btn-primary">Website</a>
-            <a href="#" target="_blank" class="btn btn-secondary">Read more</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 lead text-center mt-4">
-        <a href="https://github.com/d8vjork?tab=repositories">See more projects on GitHub</a>
-      </div>
-    </div>
+    </transition-group>
   </div>
 </template>
 
 <script>
-export default {
+import axios from 'axios'
 
+export default {
+  data () {
+    return {
+      projects: []
+    }
+  },
+
+  mounted () {
+    this.fetchProjects()
+  },
+
+  methods: {
+    fetchProjects () {
+      axios.get(this.$env.API_URL + '/contents/content/projects')
+      .then(response => {
+        for (var i = 0; i < response.data.length; i++) {
+          axios.get(response.data[i].url, {
+            headers: {
+              'accept': 'application/vnd.github.v3.raw'
+            }
+          }).then(response => {
+            var project = this.$md.render(response.data)
+            this.projects.push({
+              content: project,
+              meta: this.$md.meta
+            })
+          })
+        }
+      })
+    }
+  }
 }
 </script>

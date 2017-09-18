@@ -1,6 +1,7 @@
 ---
 title: "Unikia"
-languages: html css javascript
+image: "https://i.imgur.com/X62ecxu.jpg"
+languages: [html, css, javascript]
 website: "https://unikia.es"
 ---
 
