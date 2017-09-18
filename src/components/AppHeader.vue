@@ -19,12 +19,6 @@
   </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style>
 .blog-masthead {
   background-color: #428bca;
