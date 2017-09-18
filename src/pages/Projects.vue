@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12 col-lg-4 mb-3">
         <div class="card">
-          <img class="card-img-top" src="https://d8vjork.es/storage/projects/social-chan.jpg" alt="socialchan-screenshot">
+          <img class="card-img-top" src="../assets/img/social-chan.jpg" alt="socialchan-screenshot">
           <div class="card-body">
             <h4 class="card-title">
               Social-chan
@@ -18,7 +18,7 @@
       </div>
       <div class="col-12 col-lg-4 mb-3">
         <div class="card">
-          <img class="card-img-top" src="https://d8vjork.es/storage/projects/unikia.jpg" alt="unikia_screenshot">
+          <img class="card-img-top" src="../assets/img/unikia.jpg" alt="unikia_screenshot">
           <div class="card-body">
             <h4 class="card-title">
               Unikia
@@ -33,7 +33,7 @@
       </div>
       <div class="col-12 col-lg-4 mb-3">
         <div class="card">
-          <img class="card-img-top" src="https://d8vjork.es/storage/projects/unikia.jpg" alt="unikia_screenshot">
+          <img class="card-img-top" src="../assets/img/unikia.jpg" alt="unikia_screenshot">
           <div class="card-body">
             <h4 class="card-title">
               Kiarga
