@@ -6,7 +6,7 @@
           <h2>
             Sample blog post
             <small class="d-block text-muted mt-3 mb-4">
-              Sep 17, 2017 by <a href="https://github.com/d8vjork/d8vjork.es/commits?author=d8vjork">d8vjork</a>
+              Sep 17, 2017
             </small>
           </h2>
           <p>
