@@ -85,4 +85,8 @@ export default {
 small {
   font-size: 60%;
 }
+
+.text-big {
+  font-size: 8rem !important;
+}
 </style>

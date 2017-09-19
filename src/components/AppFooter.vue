@@ -16,8 +16,8 @@
         </li>
       </ul>
       <p>
-        Built with <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>,
-        customized by d8vjork.
+        Built with <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> &
+        <a href="https://vuejs.org/" target="_blank">VueJS</a> by d8vjork.
       </p>
       <p>
         Code licensed <a rel="license noopener" href="https://github.com/d8vjork/d8vjork.es/blob/master/LICENSE" target="_blank">MIT</a>,

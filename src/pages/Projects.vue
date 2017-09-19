@@ -8,9 +8,14 @@
             <h4 class="card-title">
               {{ project.meta.title }}
             </h4>
+            <div class="mb-2">
+              <span v-for="(lang, index) in project.meta.languages" :key="index" class="badge badge-dark mr-1">
+                {{ lang }}
+              </span>
+            </div>
             <p class="card-text" v-html="project.content"></p>
-            <a :href="project.meta.website" target="_blank" class="btn btn-primary">Website</a>
-            <a href="#" target="_blank" class="btn btn-secondary">Read more</a>
+            <a :href="project.meta.website" target="_blank" class="btn btn-primary float-left">Website</a>
+            <a href="#" class="btn btn-secondary float-right">Read more</a>
           </div>
         </div>
       </div>
