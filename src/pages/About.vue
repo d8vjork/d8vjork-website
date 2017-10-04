@@ -12,7 +12,7 @@
           they are not my main entertainment (but they were in my childhood), is it because I'm more technical in all this? 🤔
         </p>
         <p>
-          I'm always thinking and learning about new technologies and I love contribute in open source projects within GitHub,
+          self-taught person I'm always thinking and learning about new technologies and I love contribute in open source projects within GitHub,
           but I've some private projects in Gitlab (usually sharing some parts with the community in GitHub).
         </p>
         <ul class="list-inline">
