@@ -30,6 +30,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
+    // small fix with Webpack2 included Uglify
     new UglifyJSPlugin({
       sourceMap: true
     }),
