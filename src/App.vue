@@ -63,7 +63,7 @@ function cardFlip() {
 
         <RouterView class="mt-4 text-lg" />
 
-        <SocialPlatforms class="absolute mt-4 bottom-1 md:top-2 md:right-4" />
+        <SocialPlatforms class="absolute mt-4 bottom-1 md:bottom-auto md:top-2 md:right-4" />
 
         <!-- <button @click="cardFlip"
           class="absolute flex items-center px-6 py-3 text-lg font-bold rounded-full bottom-4 right-4 text-slate-100 bg-gradient-to-r from-purple-500 to-pink-500">
