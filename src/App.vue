@@ -24,7 +24,7 @@ function cardFlip() {
     <div class="flex flex-col md:flex-row md:min-h-[48rem]">
       <div
         class="flex flex-col items-center py-8 text-white md:w-1/3 md:rounded-tl md:rounded-bl md:justify-center bg-slate-900">
-        <div class="w-20 h-auto bg-indigo-600 rounded-full md:mx-auto md:w-48">
+        <div class="w-24 h-auto bg-indigo-600 rounded-full md:mx-auto md:w-48">
           <img :src="avatar" alt="my_avatar">
         </div>
 

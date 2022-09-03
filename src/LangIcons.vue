@@ -1,5 +1,5 @@
 <template>
-  <div class="px-10">
+  <div class="px-4 md:px-10">
     <div class="grid items-center grid-cols-8 gap-4">
       <svg role="img" viewBox="0 0 24 24" class="w-8 fill-current " style="color: #777BB4"
         xmlns="http://www.w3.org/2000/svg">
