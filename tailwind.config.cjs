@@ -5,11 +5,9 @@ module.exports = {
     "./src/**/*.{vue,js}",
   ],
   theme: {
-    extend: {
-      minHeight: {
-        '128': '48rem'
-      }
-    },
+    extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }

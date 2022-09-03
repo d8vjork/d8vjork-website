@@ -20,11 +20,11 @@ function cardFlip() {
 </script>
 
 <template>
-  <main class="container h-screen mx-auto py-36">
-    <div class="flex min-h-128">
+  <main class="container mx-auto md:h-screen md:py-36">
+    <div class="flex flex-col md:flex-row md:min-h-[48rem]">
       <div
-        class="flex flex-col items-center justify-center w-1/3 py-8 text-white rounded-tl rounded-bl bg-slate-900">
-        <div class="w-48 mx-auto bg-indigo-600 rounded-full">
+        class="flex flex-col items-center py-8 text-white md:w-1/3 md:rounded-tl md:rounded-bl md:justify-center bg-slate-900">
+        <div class="w-20 h-auto bg-indigo-600 rounded-full md:mx-auto md:w-48">
           <img :src="avatar" alt="my_avatar">
         </div>
 
@@ -42,8 +42,8 @@ function cardFlip() {
       </div>
 
       <div
-        class="relative flex flex-col justify-center w-2/3 p-8 rounded-tr rounded-br text-slate-800 bg-slate-100">
-        <ul class="flex space-x-4 text-lg list-none text-slate-600">
+        class="relative flex flex-col justify-center px-4 pt-6 pb-16 md:p-8 md:pb-0 md:w-2/3 md:rounded-tr md:rounded-br text-slate-800 bg-slate-100">
+        <ul class="flex justify-around text-lg list-none md:justify-start md:space-x-4 text-slate-600">
           <li>
             <RouterLink to="/" class="font-bold border-b-2 border-transparent" active-class="border-slate-800">
               About
@@ -63,7 +63,7 @@ function cardFlip() {
 
         <RouterView class="mt-4 text-lg" />
 
-        <SocialPlatforms class="absolute mt-4 top-2 right-4" />
+        <SocialPlatforms class="absolute mt-4 bottom-1 md:top-2 md:right-4" />
 
         <!-- <button @click="cardFlip"
           class="absolute flex items-center px-6 py-3 text-lg font-bold rounded-full bottom-4 right-4 text-slate-100 bg-gradient-to-r from-purple-500 to-pink-500">
