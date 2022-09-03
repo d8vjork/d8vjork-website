@@ -38,7 +38,7 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lock
 
-      - name: Build VuePress sites
+      - name: Build with Vite
         run: yarn run build
 
       - name: Deploy to GitHub Pages

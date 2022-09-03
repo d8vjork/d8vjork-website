@@ -44,17 +44,17 @@ function cardFlip() {
       <div
         class="relative flex flex-col justify-center w-2/3 p-8 rounded-tr rounded-br text-slate-800 bg-slate-100">
         <ul class="flex space-x-4 text-lg list-none text-slate-600">
-          <li class="">
+          <li>
             <RouterLink to="/" class="font-bold border-b-2 border-transparent" active-class="border-slate-800">
               About
             </RouterLink>
           </li>
-          <li class="">
+          <li>
             <RouterLink to="/projects" class="font-bold border-b-2 border-transparent" active-class="border-slate-800">
               Projects
             </RouterLink>
           </li>
-          <li class="">
+          <li>
             <a href="https://blog.d8vjork.com/" target="_blank" class="font-bold border-b-2 border-transparent">
               Blog
             </a>
