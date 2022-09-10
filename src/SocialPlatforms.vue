@@ -1,7 +1,8 @@
 <template>
   <ul class="flex flex-wrap items-center space-x-3 list-none">
     <li>
-      <a href="https://github.com/d8vjork" target="_blank" class="inline-block p-2 rounded-full"
+      <a href="https://github.com/d8vjork" rel="noreferer noopener" target="_blank"
+        class="inline-block p-2 rounded-full"
         style="background-color: #181717">
         <svg role="img" viewBox="0 0 24 24" class="w-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg">
           <title>GitHub</title>
@@ -11,7 +12,8 @@
       </a>
     </li>
     <li>
-      <a href="https://codepen.io/d8vjork" target="_blank" class="inline-block p-2 rounded-full"
+      <a href="https://codepen.io/d8vjork" rel="noreferer noopener" target="_blank"
+        class="inline-block p-2 rounded-full"
         style="background-color: #000000">
         <svg role="img" viewBox="0 0 24 24" class="w-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg">
           <title>CodePen</title>
@@ -21,7 +23,8 @@
       </a>
     </li>
     <li>
-      <a href="https://hashnode.com/@d8vjork" target="_blank" class="inline-block p-2 rounded-full"
+      <a href="https://hashnode.com/@d8vjork" rel="noreferer noopener" target="_blank"
+        class="inline-block p-2 rounded-full"
         style="background-color: #2962FF">
         <svg role="img" viewBox="0 0 24 24" class="w-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg">
           <title>Hashnode</title>
@@ -31,7 +34,8 @@
       </a>
     </li>
     <li>
-      <a href="https://twitter.com/D8vjork" target="_blank" class="inline-block p-2 rounded-full"
+      <a href="https://twitter.com/D8vjork" rel="noreferer noopener" target="_blank"
+        class="inline-block p-2 rounded-full"
         style="background-color: #1DA1F2">
         <svg role="img" viewBox="0 0 24 24" class="w-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg">
           <title>Twitter</title>
@@ -41,7 +45,8 @@
       </a>
     </li>
     <li>
-      <a href="https://linkedin.com/in/d8vjork" target="_blank" class="inline-block p-2 rounded-full"
+      <a href="https://linkedin.com/in/d8vjork" rel="noreferer noopener" target="_blank"
+        class="inline-block p-2 rounded-full"
         style="background-color: #0A66C2">
         <svg role="img" viewBox="0 0 24 24" class="w-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg">
           <title>LinkedIn</title>

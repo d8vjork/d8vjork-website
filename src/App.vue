@@ -55,7 +55,8 @@ function cardFlip() {
             </RouterLink>
           </li>
           <li>
-            <a href="https://blog.d8vjork.com/" target="_blank" class="font-bold border-b-2 border-transparent">
+            <a href="https://blog.d8vjork.com/" rel="noopener noreferer" target="_blank"
+              class="font-bold border-b-2 border-transparent">
               Blog
             </a>
           </li>
